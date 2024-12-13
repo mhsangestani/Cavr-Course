@@ -1,0 +1,3 @@
+ic BCD for sevenSegments:
+	common cathode --> 7448
+	common Anode --> 7447

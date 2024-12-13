@@ -1,0 +1,30 @@
+/*
+ * main.c
+ *
+ * Created: 12/31/2022 9:01:43 PM
+ * Author: moham
+ */
+
+#include <mega32.h>
+#include <delay.h>
+int i,y=0;
+void main(void)
+{
+DDRA=0xff;
+while (1)
+    {
+    // Please write your application code here
+    for(i=1;i<=128;i*=2){
+    y = y+i;
+    PORTA=y;
+    delay_ms(500);
+    }
+    //TODO: return led is not coorect 
+    for(i=1;i>=1;i*=2){
+    y = y - i;
+    PORTA=y;           
+    delay_ms(500);
+    }
+    y = 0;
+    }
+}
